@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html{
+            font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif
+        }
+    </style>
+    <title>Maintenance</title>
+</head>
+<body>
+    <div style="margin-top: 5%; text-align: center;">
+        <img src="./emojione-exclamation.png" style="width: 100%; max-width: 400px; min-width: 250px;" />
+        <p style="font-size: 24pt;">An error has occurred.</p>
+        <p style="font-size: 16pt;">Try refreshing the page or <a href="https://docs.cpanel.net/knowledge-base/dns/how-to-clear-your-dns-cache/" target="_blank">clearing your DNS cache</a>.</p><br/>
+        <noscript><strong>NOTICE: JavaScript required to list mirrors.</strong></noscript>
+        <div id="mirrors">&nbsp;</div>
+    </div>
+    <script>
+        function getCurrentURL () {
+            return window.location.href
+        }
+        const url = getCurrentURL()
+        let mirrors = `<strong>Available Mirrors:</strong><p><a target="_blank" href="https://archive.is/newest/`+url+`">https://archive.is/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://archive.today/newest/`+url+`">https://archive.today/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://archive.ph/newest/`+url+`">https://archive.ph/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://archive.vn/newest/`+url+`">https://archive.vn/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://archive.fo/newest/`+url+`">https://archive.fo/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://archive.li/newest/`+url+`">https://archive.li/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://archive.md/newest/`+url+`">https://archive.md/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion/newest/`+url+`">https://archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion/newest/`+url+`</a></p>
+<p><a target="_blank" href="https://web.archive.org/web/`+url+`">https://web.archive.org/web/`+url+`</a></p>
+<p><a target="_blank" href="https://www.gigablast.com/search?q=url:`+url+`">https://www.gigablast.com/search?q=url:`+url+`</a></p>
+<p><a target="_blank" href="https://megalodon.jp/?url=`+url+`">https://megalodon.jp/?url=`+url+`</a></p>
+<p><a target="_blank" href="https://webcache.googleusercontent.com/search?q=cache:`+url+`">https://webcache.googleusercontent.com/search?q=cache:`+url+`</a></p>
+<p><a target="_blank" href="https://search.yahoo.com/search?p=url:`+url+`">https://search.yahoo.com/search?p=url:`+url+`</a></p>
+<p><a target="_blank" href="https://www.bing.com/search?q=url:`+url+`">https://www.bing.com/search?q=url:`+url+`</a></p>
+<p><a target="_blank" href="https://yandex.com/search/?text=`+url+`">https://yandex.com/search/?text=`+url+`</a></p>`
+    document.getElementById("mirrors").innerHTML = mirrors
+    </script>
+</body>
+</html>
